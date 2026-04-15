@@ -1,13 +1,13 @@
 <?php
 
-namespace Khill\Lavacharts\DataTables\Columns;
+namespace Andrewskm\Lavacharts\DataTables\Columns;
 
-use Khill\Lavacharts\DataTables\Formats\Format;
-use Khill\Lavacharts\Exceptions\InvalidColumnRole;
-use Khill\Lavacharts\Exceptions\InvalidColumnType;
-use Khill\Lavacharts\Support\Customizable;
-use Khill\Lavacharts\Values\Role;
-use Khill\Lavacharts\Values\StringValue;
+use Andrewskm\Lavacharts\DataTables\Formats\Format;
+use Andrewskm\Lavacharts\Exceptions\InvalidColumnRole;
+use Andrewskm\Lavacharts\Exceptions\InvalidColumnType;
+use Andrewskm\Lavacharts\Support\Customizable;
+use Andrewskm\Lavacharts\Values\Role;
+use Andrewskm\Lavacharts\Values\StringValue;
 
 /**
  * Column Object
@@ -15,7 +15,7 @@ use Khill\Lavacharts\Values\StringValue;
  * The Column object is used to define the different columns for a DataTable.
  *
  *
- * @package   Khill\Lavacharts\DataTables\Columns
+ * @package   Andrewskm\Lavacharts\DataTables\Columns
  * @since     3.1.0
  * @author    Kevin Hill <kevinkhill@gmail.com>
  * @copyright (c) 2017, KHill Designs
@@ -42,14 +42,14 @@ class ColumnBuilder
     /**
      * Column formatter.
      *
-     * @var \Khill\Lavacharts\DataTables\Formats\Format
+     * @var \Andrewskm\Lavacharts\DataTables\Formats\Format
      */
     private $format = null;
 
     /**
      * Column role.
      *
-     * @var \Khill\Lavacharts\Values\Role
+     * @var \Andrewskm\Lavacharts\Values\Role
      */
     private $role = null;
 
@@ -64,7 +64,7 @@ class ColumnBuilder
      * Sets the type of column.
      *
      * @param  string $type
-     * @throws \Khill\Lavacharts\Exceptions\InvalidColumnType
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidColumnType
      */
     public function setType($type)
     {
@@ -88,7 +88,7 @@ class ColumnBuilder
     /**
      * Sets the column formatter.
      *
-     * @param \Khill\Lavacharts\DataTables\Formats\Format $format
+     * @param \Andrewskm\Lavacharts\DataTables\Formats\Format $format
      */
     public function setFormat(Format $format = null)
     {
@@ -99,7 +99,7 @@ class ColumnBuilder
      * Sets the column role.
      *
      * @param  string $role
-     * @throws \Khill\Lavacharts\Exceptions\InvalidColumnRole
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidColumnRole
      */
     public function setRole($role)
     {
@@ -121,7 +121,7 @@ class ColumnBuilder
     /**
      * Creates a new column instance with the set values.
      *
-     * @return \Khill\Lavacharts\DataTables\Columns\Column
+     * @return \Andrewskm\Lavacharts\DataTables\Columns\Column
      */
     public function getResult()
     {

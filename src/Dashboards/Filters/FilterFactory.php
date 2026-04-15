@@ -1,17 +1,17 @@
 <?php
 
-namespace Khill\Lavacharts\Dashboards\Filters;
+namespace Andrewskm\Lavacharts\Dashboards\Filters;
 
-use \Khill\Lavacharts\Exceptions\InvalidConfigValue;
-use \Khill\Lavacharts\Exceptions\InvalidFilter;
-use Khill\Lavacharts\Exceptions\InvalidFilterType;
-use Khill\Lavacharts\Exceptions\InvalidParamType;
+use \Andrewskm\Lavacharts\Exceptions\InvalidConfigValue;
+use \Andrewskm\Lavacharts\Exceptions\InvalidFilter;
+use Andrewskm\Lavacharts\Exceptions\InvalidFilterType;
+use Andrewskm\Lavacharts\Exceptions\InvalidParamType;
 
 /**
  * FilterFactory creates new filters for use in a dashboard.
  *
  *
- * @package   Khill\Lavacharts\Dashboards\Filters
+ * @package   Andrewskm\Lavacharts\Dashboards\Filters
  * @since     3.1.0
  * @author    Kevin Hill <kevinkhill@gmail.com>
  * @copyright (c) 2017, KHill Designs
@@ -40,9 +40,9 @@ class FilterFactory
      * @param  string     $type
      * @param  string|int $columnLabelOrIndex
      * @param  array      $config
-     * @return \Khill\Lavacharts\Dashboards\Filters\Filter
-     * @throws \Khill\Lavacharts\Exceptions\InvalidFilterType
-     * @throws \Khill\Lavacharts\Exceptions\InvalidParamType
+     * @return \Andrewskm\Lavacharts\Dashboards\Filters\Filter
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidFilterType
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidParamType
      */
     public static function create($type, $columnLabelOrIndex, array $config = [])
     {

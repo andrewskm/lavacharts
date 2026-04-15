@@ -1,6 +1,6 @@
 <?php
 
-namespace Khill\Lavacharts\Support;
+namespace Andrewskm\Lavacharts\Support;
 
 /**
  * Class Customizable
@@ -9,7 +9,7 @@ namespace Khill\Lavacharts\Support;
  * has options, which can be set to configure / customize the final result once rendered.
  *
  *
- * @package    Khill\Lavacharts\Configs
+ * @package    Andrewskm\Lavacharts\Configs
  * @since      3.0.5
  * @author     Kevin Hill <kevinkhill@gmail.com>
  * @copyright  (c) 2017, KHill Designs

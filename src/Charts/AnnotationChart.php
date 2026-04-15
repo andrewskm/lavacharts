@@ -1,6 +1,6 @@
 <?php
 
-namespace Khill\Lavacharts\Charts;
+namespace Andrewskm\Lavacharts\Charts;
 
 /**
  * AnnotationChart Class
@@ -10,7 +10,7 @@ namespace Khill\Lavacharts\Charts;
  * should be preferred whenever possible.
  *
  *
- * @package   Khill\Lavacharts\Charts
+ * @package   Andrewskm\Lavacharts\Charts
  * @since     3.0.5
  * @author    Kevin Hill <kevinkhill@gmail.com>
  * @copyright (c) 2017, KHill Designs

@@ -1,8 +1,8 @@
 <?php
 
-namespace Khill\Lavacharts\Exceptions;
+namespace Andrewskm\Lavacharts\Exceptions;
 
-use Khill\Lavacharts\Support\Contracts\RenderableInterface as Renderable;
+use Andrewskm\Lavacharts\Support\Contracts\RenderableInterface as Renderable;
 
 class ElementIdException extends RenderingException
 {

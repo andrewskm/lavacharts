@@ -1,5 +1,5 @@
 <?php
-    use Khill\Lavacharts\DataTables\DataFactory;
+    use Andrewskm\Lavacharts\DataTables\DataFactory;
 
     $daysToMilliseconds = function ($days) {
         return $days * 24 * 60 * 60 * 1000;

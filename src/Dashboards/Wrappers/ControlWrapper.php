@@ -1,16 +1,16 @@
 <?php
 
-namespace Khill\Lavacharts\Dashboards\Wrappers;
+namespace Andrewskm\Lavacharts\Dashboards\Wrappers;
 
-use Khill\Lavacharts\Values\ElementId;
-use Khill\Lavacharts\Dashboards\Filters\Filter;
+use Andrewskm\Lavacharts\Values\ElementId;
+use Andrewskm\Lavacharts\Dashboards\Filters\Filter;
 
 /**
  * ControlWrapper Class
  *
  * Used for building controls for dashboards.
  *
- * @package   Khill\Lavacharts\Dashboards\Wrappers
+ * @package   Andrewskm\Lavacharts\Dashboards\Wrappers
  * @since     3.0.0
  * @author    Kevin Hill <kevinkhill@gmail.com>
  * @copyright (c) 2017, KHill Designs
@@ -30,8 +30,8 @@ class ControlWrapper extends Wrapper
     /**
      * Builds a ControlWrapper object.
      *
-     * @param  \Khill\Lavacharts\Dashboards\Filters\Filter $filter
-     * @param  \Khill\Lavacharts\Values\ElementId          $containerId
+     * @param  \Andrewskm\Lavacharts\Dashboards\Filters\Filter $filter
+     * @param  \Andrewskm\Lavacharts\Values\ElementId          $containerId
      */
     public function __construct(Filter $filter, ElementId $containerId)
     {

@@ -1,15 +1,15 @@
 <?php
 
-namespace Khill\Lavacharts\Values;
+namespace Andrewskm\Lavacharts\Values;
 
-use Khill\Lavacharts\Exceptions\InvalidLabel;
+use Andrewskm\Lavacharts\Exceptions\InvalidLabel;
 
 /**
  * Label Value Object
  *
  * Creates a new label for a chart or dashboard while checking if it is a non empty string.
  *
- * @package   Khill\Lavacharts\Values
+ * @package   Andrewskm\Lavacharts\Values
  * @since     3.0.0
  * @author    Kevin Hill <kevinkhill@gmail.com>
  * @copyright (c) 2017, KHill Designs

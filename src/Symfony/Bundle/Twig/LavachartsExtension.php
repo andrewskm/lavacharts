@@ -1,23 +1,23 @@
 <?php
 
-namespace Khill\Lavacharts\Symfony\Bundle\Twig;
+namespace Andrewskm\Lavacharts\Symfony\Bundle\Twig;
 
-use Khill\Lavacharts\Lavacharts;
-use Khill\Lavacharts\Charts\ChartFactory;
+use Andrewskm\Lavacharts\Lavacharts;
+use Andrewskm\Lavacharts\Charts\ChartFactory;
 
 class LavachartsExtension extends \Twig_Extension
 {
     /**
      * The Lavacharts object passed in from the service container.
      *
-     * @var \Khill\Lavacharts\Lavacharts
+     * @var \Andrewskm\Lavacharts\Lavacharts
      */
     private $lava;
 
     /**
      * LavachartsExtension constructor.
      *
-     * @param \Khill\Lavacharts\Lavacharts $lava
+     * @param \Andrewskm\Lavacharts\Lavacharts $lava
      */
     public function __construct(Lavacharts $lava)
     {

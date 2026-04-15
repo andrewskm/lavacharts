@@ -1,16 +1,16 @@
 <?php
 
-namespace Khill\Lavacharts\Tests\Javascript;
+namespace Andrewskm\Lavacharts\Tests\Javascript;
 
-use Khill\Lavacharts\Charts\LineChart;
-use Khill\Lavacharts\Javascript\ChartJsFactory;
-use Khill\Lavacharts\Tests\ProvidersTestCase;
-use Khill\Lavacharts\DataTables\DataTable;
+use Andrewskm\Lavacharts\Charts\LineChart;
+use Andrewskm\Lavacharts\Javascript\ChartJsFactory;
+use Andrewskm\Lavacharts\Tests\ProvidersTestCase;
+use Andrewskm\Lavacharts\DataTables\DataTable;
 
 /**
  * @property \Mockery\Mock                               mockChartLabel
  * @property \Mockery\Mock                               mockElementId
- * @property \Khill\Lavacharts\Javascript\ChartJsFactory factory
+ * @property \Andrewskm\Lavacharts\Javascript\ChartJsFactory factory
  * @property \Mockery\Mock                               mlc
  */
 class ChartJsFactoryTest extends ProvidersTestCase
@@ -19,8 +19,8 @@ class ChartJsFactoryTest extends ProvidersTestCase
     {
         parent::setUp();
 
-        $this->mockChartLabel = \Mockery::mock('\Khill\Lavacharts\Values\Label', ['TestChart'])->makePartial();
-        $this->mockElementId = \Mockery::mock('\Khill\Lavacharts\Values\ElementId', ['my-chart'])->makePartial();
+        $this->mockChartLabel = \Mockery::mock('\Andrewskm\Lavacharts\Values\Label', ['TestChart'])->makePartial();
+        $this->mockElementId = \Mockery::mock('\Andrewskm\Lavacharts\Values\ElementId', ['my-chart'])->makePartial();
 
         $datatable = new DataTable();
 
@@ -29,7 +29,7 @@ class ChartJsFactoryTest extends ProvidersTestCase
                   ->addColumn('number')
                   ->addRow([10101, 12345, 67890]);
 
-//        $this->mlc = \Mockery::mock('Khill\Lavacharts\Charts\LineChart', [$this->mockChartLabel, $datatable, [
+//        $this->mlc = \Mockery::mock('Andrewskm\Lavacharts\Charts\LineChart', [$this->mockChartLabel, $datatable, [
 //            'elementId' => 'chart-div',
 //            'legend' => 'none'
 //        ]])->makePartial();

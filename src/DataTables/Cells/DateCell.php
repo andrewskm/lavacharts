@@ -1,20 +1,20 @@
 <?php
 
-namespace Khill\Lavacharts\DataTables\Cells;
+namespace Andrewskm\Lavacharts\DataTables\Cells;
 
 use Carbon\Carbon;
-use Khill\Lavacharts\Exceptions\CarbonParseError;
-use Khill\Lavacharts\Exceptions\InvalidDateTimeFormat;
-use Khill\Lavacharts\Exceptions\InvalidDateTimeString;
-use Khill\Lavacharts\Exceptions\InvalidStringValue;
-use Khill\Lavacharts\Values\StringValue;
+use Andrewskm\Lavacharts\Exceptions\CarbonParseError;
+use Andrewskm\Lavacharts\Exceptions\InvalidDateTimeFormat;
+use Andrewskm\Lavacharts\Exceptions\InvalidDateTimeString;
+use Andrewskm\Lavacharts\Exceptions\InvalidStringValue;
+use Andrewskm\Lavacharts\Values\StringValue;
 
 /**
  * DateCell Class
  *
  * Wrapper object to implement JsonSerializable on the Carbon object.
  *
- * @package   Khill\Lavacharts\DataTables\Cells
+ * @package   Andrewskm\Lavacharts\DataTables\Cells
  * @since     3.0.0
  * @author    Kevin Hill <kevinkhill@gmail.com>
  * @copyright (c) 2017, KHill Designs
@@ -44,9 +44,9 @@ class DateCell extends Cell
      *
      * @param  string $dateTimeString
      * @param  string $dateTimeFormat
-     * @return \Khill\Lavacharts\DataTables\Cells\Cell
-     * @throws \Khill\Lavacharts\Exceptions\InvalidDateTimeFormat
-     * @throws \Khill\Lavacharts\Exceptions\InvalidDateTimeString
+     * @return \Andrewskm\Lavacharts\DataTables\Cells\Cell
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidDateTimeFormat
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidDateTimeString
      */
     public static function parseString($dateTimeString, $dateTimeFormat = '')
     {
@@ -82,8 +82,8 @@ class DateCell extends Cell
      *
      * @param  string $format
      * @param  string $datetime
-     * @return \Khill\Lavacharts\DataTables\Cells\DateCell
-     * @throws \Khill\Lavacharts\Exceptions\InvalidDateTimeFormat
+     * @return \Andrewskm\Lavacharts\DataTables\Cells\DateCell
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidDateTimeFormat
      */
     public static function createFromFormat($format, $datetime)
     {

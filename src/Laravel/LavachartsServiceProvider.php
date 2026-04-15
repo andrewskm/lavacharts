@@ -1,8 +1,8 @@
 <?php
 
-namespace Khill\Lavacharts\Laravel;
+namespace Andrewskm\Lavacharts\Laravel;
 
-use \Khill\Lavacharts\Lavacharts;
+use \Andrewskm\Lavacharts\Lavacharts;
 use \Illuminate\Support\ServiceProvider;
 use \Illuminate\Foundation\AliasLoader;
 
@@ -13,7 +13,7 @@ use \Illuminate\Foundation\AliasLoader;
  * The Alias is also automatically loaded so you can access Lavacharts with the "Lava::" syntax
  *
  *
- * @package    Khill\Lavacharts\Laravel
+ * @package    Andrewskm\Lavacharts\Laravel
  * @since      2.0.0
  * @author     Kevin Hill <kevinkhill@gmail.com>
  * @copyright  (c) 2017, KHill Designs
@@ -67,7 +67,7 @@ class LavachartsServiceProvider extends ServiceProvider
 
         $this->app->booting(function() {
             $loader = AliasLoader::getInstance();
-            $loader->alias('Lava', 'Khill\Lavacharts\Laravel\LavachartsFacade');
+            $loader->alias('Lava', 'Andrewskm\Lavacharts\Laravel\LavachartsFacade');
         });
 
     }

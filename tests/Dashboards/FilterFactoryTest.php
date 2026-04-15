@@ -1,9 +1,9 @@
 <?php
 
-namespace Khill\Lavacharts\Tests\Dashboards\Filters;
+namespace Andrewskm\Lavacharts\Tests\Dashboards\Filters;
 
-use Khill\Lavacharts\Dashboards\Filters\FilterFactory;
-use Khill\Lavacharts\Tests\ProvidersTestCase;
+use Andrewskm\Lavacharts\Dashboards\Filters\FilterFactory;
+use Andrewskm\Lavacharts\Tests\ProvidersTestCase;
 
 class FilterFactoryTest extends ProvidersTestCase
 {
@@ -57,7 +57,7 @@ class FilterFactoryTest extends ProvidersTestCase
 
     /**
      * @dataProvider nonStringProvider
-     * @expectedException \Khill\Lavacharts\Exceptions\InvalidFilterType
+     * @expectedException \Andrewskm\Lavacharts\Exceptions\InvalidFilterType
      */
     public function testStaticCreateMethodWithInvalidType($badType)
     {
@@ -66,7 +66,7 @@ class FilterFactoryTest extends ProvidersTestCase
 
     /**
      * @dataProvider nonStringOrIntProvider
-     * @expectedException \Khill\Lavacharts\Exceptions\InvalidParamType
+     * @expectedException \Andrewskm\Lavacharts\Exceptions\InvalidParamType
      */
     public function testStaticCreateMethodWithInvalidIndex($badType)
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Khill\Lavacharts\Tests\Support;
+namespace Andrewskm\Lavacharts\Tests\Support;
 
 class Foo {
     public $fooVar = 1;

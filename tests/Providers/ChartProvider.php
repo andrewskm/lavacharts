@@ -1,33 +1,33 @@
 <?php
 
-namespace Khill\Lavacharts\Tests\Providers;
+namespace Andrewskm\Lavacharts\Tests\Providers;
 
 use BadMethodCallException;
-use Khill\Lavacharts\Charts\AnnotationChart;
-use Khill\Lavacharts\Charts\AreaChart;
-use Khill\Lavacharts\Charts\BarChart;
-use Khill\Lavacharts\Charts\BubbleChart;
-use Khill\Lavacharts\Charts\CalendarChart;
-use Khill\Lavacharts\Charts\CandlestickChart;
-use Khill\Lavacharts\Charts\Chart;
-use Khill\Lavacharts\Charts\ColumnChart;
-use Khill\Lavacharts\Charts\ComboChart;
-use Khill\Lavacharts\Charts\DonutChart;
-use Khill\Lavacharts\Charts\GanttChart;
-use Khill\Lavacharts\Charts\GaugeChart;
-use Khill\Lavacharts\Charts\GeoChart;
-use Khill\Lavacharts\Charts\HistogramChart;
-use Khill\Lavacharts\Charts\LineChart;
-use Khill\Lavacharts\Charts\OrgChart;
-use Khill\Lavacharts\Charts\PieChart;
-use Khill\Lavacharts\Charts\SankeyChart;
-use Khill\Lavacharts\Charts\ScatterChart;
-use Khill\Lavacharts\Charts\SteppedAreaChart;
-use Khill\Lavacharts\Charts\TableChart;
-use Khill\Lavacharts\Charts\TimelineChart;
-use Khill\Lavacharts\Charts\TreeMapChart;
-use Khill\Lavacharts\Charts\WordTreeChart;
-use Khill\Lavacharts\DataTables\DataTable;
+use Andrewskm\Lavacharts\Charts\AnnotationChart;
+use Andrewskm\Lavacharts\Charts\AreaChart;
+use Andrewskm\Lavacharts\Charts\BarChart;
+use Andrewskm\Lavacharts\Charts\BubbleChart;
+use Andrewskm\Lavacharts\Charts\CalendarChart;
+use Andrewskm\Lavacharts\Charts\CandlestickChart;
+use Andrewskm\Lavacharts\Charts\Chart;
+use Andrewskm\Lavacharts\Charts\ColumnChart;
+use Andrewskm\Lavacharts\Charts\ComboChart;
+use Andrewskm\Lavacharts\Charts\DonutChart;
+use Andrewskm\Lavacharts\Charts\GanttChart;
+use Andrewskm\Lavacharts\Charts\GaugeChart;
+use Andrewskm\Lavacharts\Charts\GeoChart;
+use Andrewskm\Lavacharts\Charts\HistogramChart;
+use Andrewskm\Lavacharts\Charts\LineChart;
+use Andrewskm\Lavacharts\Charts\OrgChart;
+use Andrewskm\Lavacharts\Charts\PieChart;
+use Andrewskm\Lavacharts\Charts\SankeyChart;
+use Andrewskm\Lavacharts\Charts\ScatterChart;
+use Andrewskm\Lavacharts\Charts\SteppedAreaChart;
+use Andrewskm\Lavacharts\Charts\TableChart;
+use Andrewskm\Lavacharts\Charts\TimelineChart;
+use Andrewskm\Lavacharts\Charts\TreeMapChart;
+use Andrewskm\Lavacharts\Charts\WordTreeChart;
+use Andrewskm\Lavacharts\DataTables\DataTable;
 
 class ChartProvider
 {

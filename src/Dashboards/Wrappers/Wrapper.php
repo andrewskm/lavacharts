@@ -1,12 +1,12 @@
 <?php
 
-namespace Khill\Lavacharts\Dashboards\Wrappers;
+namespace Andrewskm\Lavacharts\Dashboards\Wrappers;
 
-use Khill\Lavacharts\Values\ElementId;
-use Khill\Lavacharts\Support\Traits\ElementIdTrait as HasElementId;
-use Khill\Lavacharts\Support\Contracts\WrappableInterface as Wrappable;
-use Khill\Lavacharts\Support\Contracts\JsonableInterface as Jsonable;
-use Khill\Lavacharts\Support\Contracts\JsClassInterface as JsClass;
+use Andrewskm\Lavacharts\Values\ElementId;
+use Andrewskm\Lavacharts\Support\Traits\ElementIdTrait as HasElementId;
+use Andrewskm\Lavacharts\Support\Contracts\WrappableInterface as Wrappable;
+use Andrewskm\Lavacharts\Support\Contracts\JsonableInterface as Jsonable;
+use Andrewskm\Lavacharts\Support\Contracts\JsClassInterface as JsClass;
 
 /**
  * Class Wrapper
@@ -14,7 +14,7 @@ use Khill\Lavacharts\Support\Contracts\JsClassInterface as JsClass;
  * The control and chart wrappers extend this for common methods.
  *
  *
- * @package   Khill\Lavacharts\Dashboards\Wrappers
+ * @package   Andrewskm\Lavacharts\Dashboards\Wrappers
  * @since     3.0.0
  * @author    Kevin Hill <kevinkhill@gmail.com>
  * @copyright (c) 2017, KHill Designs
@@ -29,22 +29,22 @@ class Wrapper extends Customizable implements \JsonSerializable, Jsonable, JsCla
     /**
      * The contents of the wrap, either Chart or Filter.
      *
-     * @var \Khill\Lavacharts\Support\Contracts\WrappableInterface
+     * @var \Andrewskm\Lavacharts\Support\Contracts\WrappableInterface
      */
     protected $contents;
 
     /**
      * The renderable's unique elementId.
      *
-     * @var \Khill\Lavacharts\Values\ElementId
+     * @var \Andrewskm\Lavacharts\Values\ElementId
      */
     protected $elementId;
 
     /**
      * Builds a new Wrapper object.
      *
-     * @param \Khill\Lavacharts\Support\Contracts\WrappableInterface $itemToWrap
-     * @param \Khill\Lavacharts\Values\ElementId                     $elementId
+     * @param \Andrewskm\Lavacharts\Support\Contracts\WrappableInterface $itemToWrap
+     * @param \Andrewskm\Lavacharts\Values\ElementId                     $elementId
      */
     public function __construct(Wrappable $itemToWrap, ElementId $elementId)
     {
@@ -56,7 +56,7 @@ class Wrapper extends Customizable implements \JsonSerializable, Jsonable, JsCla
     /**
      * Unwraps and returns the wrapped object.
      *
-     * @return \Khill\Lavacharts\Support\Contracts\WrappableInterface
+     * @return \Andrewskm\Lavacharts\Support\Contracts\WrappableInterface
      */
     public function unwrap()
     {

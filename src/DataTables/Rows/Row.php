@@ -1,17 +1,17 @@
 <?php
 
-namespace Khill\Lavacharts\DataTables\Rows;
+namespace Andrewskm\Lavacharts\DataTables\Rows;
 
 use Carbon\Carbon;
-use Khill\Lavacharts\DataTables\Cells\NullCell;
-use Khill\Lavacharts\Values\StringValue;
-use Khill\Lavacharts\DataTables\Cells\Cell;
-use Khill\Lavacharts\DataTables\Cells\DateCell;
-use Khill\Lavacharts\DataTables\DataTable;
-use Khill\Lavacharts\Exceptions\InvalidCellCount;
-use Khill\Lavacharts\Exceptions\InvalidColumnIndex;
-use Khill\Lavacharts\Exceptions\InvalidDate;
-use Khill\Lavacharts\Exceptions\InvalidRowDefinition;
+use Andrewskm\Lavacharts\DataTables\Cells\NullCell;
+use Andrewskm\Lavacharts\Values\StringValue;
+use Andrewskm\Lavacharts\DataTables\Cells\Cell;
+use Andrewskm\Lavacharts\DataTables\Cells\DateCell;
+use Andrewskm\Lavacharts\DataTables\DataTable;
+use Andrewskm\Lavacharts\Exceptions\InvalidCellCount;
+use Andrewskm\Lavacharts\Exceptions\InvalidColumnIndex;
+use Andrewskm\Lavacharts\Exceptions\InvalidDate;
+use Andrewskm\Lavacharts\Exceptions\InvalidRowDefinition;
 
 /**
  * Row Object
@@ -19,7 +19,7 @@ use Khill\Lavacharts\Exceptions\InvalidRowDefinition;
  * The row object contains all the data for a row, stored in an array, indexed by columns.
  *
  *
- * @package   Khill\Lavacharts\DataTables\Rows
+ * @package   Andrewskm\Lavacharts\DataTables\Rows
  * @since     3.0.0
  * @author    Kevin Hill <kevinkhill@gmail.com>
  * @copyright (c) 2017, KHill Designs
@@ -32,7 +32,7 @@ class Row implements \ArrayAccess, \JsonSerializable
     /**
      * Row values
      *
-     * @var \Khill\Lavacharts\DataTables\Cells\Cell[]
+     * @var \Andrewskm\Lavacharts\DataTables\Cells\Cell[]
      */
     protected $values;
 
@@ -69,12 +69,12 @@ class Row implements \ArrayAccess, \JsonSerializable
     /**
      * Creates a new Row object from an array of values.
      *
-     * @param \Khill\Lavacharts\DataTables\DataTable $datatable
+     * @param \Andrewskm\Lavacharts\DataTables\DataTable $datatable
      * @param  array                                 $valueArray Array of values to assign to the row.
-     * @return \Khill\Lavacharts\DataTables\Rows\Row
-     * @throws \Khill\Lavacharts\Exceptions\InvalidCellCount
-     * @throws \Khill\Lavacharts\Exceptions\InvalidDate
-     * @throws \Khill\Lavacharts\Exceptions\InvalidRowDefinition
+     * @return \Andrewskm\Lavacharts\DataTables\Rows\Row
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidCellCount
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidDate
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidRowDefinition
      */
     public static function create(DataTable $datatable, $valueArray)
     {
@@ -121,7 +121,7 @@ class Row implements \ArrayAccess, \JsonSerializable
             } else {
                 if (is_array($cellValue) === true) {
                     $cell = new \ReflectionClass(
-                        'Khill\\Lavacharts\\DataTables\\Cells\\Cell'
+                        'Andrewskm\\Lavacharts\\DataTables\\Cells\\Cell'
                     );
 
                     $rowData[] = $cell->newInstanceArgs($cellValue);
@@ -138,8 +138,8 @@ class Row implements \ArrayAccess, \JsonSerializable
      * Returns a column value from the Row.
      *
      * @param  int $columnIndex Column value to fetch from the row.
-     * @throws \Khill\Lavacharts\Exceptions\InvalidColumnIndex
-     * @return \Khill\Lavacharts\DataTables\Cells\Cell
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidColumnIndex
+     * @return \Andrewskm\Lavacharts\DataTables\Cells\Cell
      */
     public function getCell($columnIndex)
     {

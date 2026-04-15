@@ -1,11 +1,11 @@
 <?php
 
-namespace Khill\Lavacharts\Support;
+namespace Andrewskm\Lavacharts\Support;
 
 use ArrayAccess;
 use JsonSerializable;
-use Khill\Lavacharts\Support\Contracts\Arrayable;
-use Khill\Lavacharts\Support\Contracts\Jsonable;
+use Andrewskm\Lavacharts\Support\Contracts\Arrayable;
+use Andrewskm\Lavacharts\Support\Contracts\Jsonable;
 
 /**
  * Options Class
@@ -14,7 +14,7 @@ use Khill\Lavacharts\Support\Contracts\Jsonable;
  * to json or chaining from what has set options.
  *
  *
- * @package       Khill\Lavacharts\Support
+ * @package       Andrewskm\Lavacharts\Support
  * @since         3.2.0
  * @author        Kevin Hill <kevinkhill@gmail.com>
  * @copyright (c) 2017, KHill Designs

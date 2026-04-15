@@ -1,21 +1,21 @@
 <?php
 
-namespace Khill\Lavacharts\DataTables;
+namespace Andrewskm\Lavacharts\DataTables;
 
 use DateTimeZone;
 use JsonSerializable;
-use Khill\Lavacharts\DataTables\Formats\Format;
-use Khill\Lavacharts\DataTables\Rows\Row;
-use Khill\Lavacharts\DataTables\Columns\ColumnFactory;
-use Khill\Lavacharts\Exceptions\InvalidColumnDefinition;
-use Khill\Lavacharts\Exceptions\InvalidColumnIndex;
-use Khill\Lavacharts\Exceptions\InvalidColumnRole;
-use Khill\Lavacharts\Exceptions\InvalidConfigValue;
-use Khill\Lavacharts\Exceptions\InvalidDateTimeFormat;
-use Khill\Lavacharts\Exceptions\InvalidTimeZone;
-use Khill\Lavacharts\Support\Contracts\JsonableInterface as Jsonable;
-use Khill\Lavacharts\Values\Role;
-use Khill\Lavacharts\Values\StringValue;
+use Andrewskm\Lavacharts\DataTables\Formats\Format;
+use Andrewskm\Lavacharts\DataTables\Rows\Row;
+use Andrewskm\Lavacharts\DataTables\Columns\ColumnFactory;
+use Andrewskm\Lavacharts\Exceptions\InvalidColumnDefinition;
+use Andrewskm\Lavacharts\Exceptions\InvalidColumnIndex;
+use Andrewskm\Lavacharts\Exceptions\InvalidColumnRole;
+use Andrewskm\Lavacharts\Exceptions\InvalidConfigValue;
+use Andrewskm\Lavacharts\Exceptions\InvalidDateTimeFormat;
+use Andrewskm\Lavacharts\Exceptions\InvalidTimeZone;
+use Andrewskm\Lavacharts\Support\Contracts\JsonableInterface as Jsonable;
+use Andrewskm\Lavacharts\Values\Role;
+use Andrewskm\Lavacharts\Values\StringValue;
 
 /**
  * The DataTable object is used to hold the data passed into a visualization.
@@ -31,7 +31,7 @@ use Khill\Lavacharts\Values\StringValue;
  * arbitrary class names or styles to individual cells.
  *
  *
- * @package   Khill\Lavacharts\DataTables
+ * @package   Andrewskm\Lavacharts\DataTables
  * @since     1.0.0
  * @author    Kevin Hill <kevinkhill@gmail.com>
  * @copyright (c) 2017, KHill Designs
@@ -44,14 +44,14 @@ class DataTable implements Jsonable, JsonSerializable
     /**
      * Timezone for dealing with datetime and Carbon objects.
      *
-     * @var \Khill\Lavacharts\DataTables\Columns\ColumnFactory
+     * @var \Andrewskm\Lavacharts\DataTables\Columns\ColumnFactory
      */
     protected $columnFactory;
 
     /**
      * RowFactory for the DataTable
      *
-     * @var \Khill\Lavacharts\DataTables\Rows\RowFactory
+     * @var \Andrewskm\Lavacharts\DataTables\Rows\RowFactory
      */
     protected $rowFactory;
 
@@ -95,14 +95,14 @@ class DataTable implements Jsonable, JsonSerializable
     /**
      * Create a new DataCell for a value in a Row
      *
-     * @see \Khill\Lavacharts\DataTables\DataFactory::cell
+     * @see \Andrewskm\Lavacharts\DataTables\DataFactory::cell
      * @deprecated 3.0.5
      *
      * @since  3.0.0
      * @param  mixed  $v Value of the Cell
      * @param  string $f Formatted version of the cell, as a string
      * @param  array  $p Cell specific customization options
-     * @return \Khill\Lavacharts\DataTables\Cells\Cell
+     * @return \Andrewskm\Lavacharts\DataTables\Cells\Cell
      */
     public static function cell($v, $f = '', $p = [])
     {
@@ -113,12 +113,12 @@ class DataTable implements Jsonable, JsonSerializable
      * Parses a string of JSON data into a DataTable.
      *
      * @deprecated 3.1.0 Use the DataFactory instead
-     * @see \Khill\Lavacharts\DataTables\DataFactory::createFromJson
+     * @see \Andrewskm\Lavacharts\DataTables\DataFactory::createFromJson
      *
      * @since  3.0.0
      * @param  string $jsonString JSON string to decode
-     * @return \Khill\Lavacharts\DataTables\DataTable
-     * @throws \Khill\Lavacharts\Exceptions\InvalidJson
+     * @return \Andrewskm\Lavacharts\DataTables\DataTable
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidJson
      */
     public static function createFromJson($jsonString)
     {
@@ -129,8 +129,8 @@ class DataTable implements Jsonable, JsonSerializable
      * Sets the Timezone that Carbon will use when parsing dates
      *
      * @param  string $timezone
-     * @return \Khill\Lavacharts\DataTables\DataTable
-     * @throws \Khill\Lavacharts\Exceptions\InvalidTimeZone
+     * @return \Andrewskm\Lavacharts\DataTables\DataTable
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidTimeZone
      */
     public function setTimezone($timezone)
     {
@@ -160,8 +160,8 @@ class DataTable implements Jsonable, JsonSerializable
      * passed to a cell in a date column, that was parsed incorrectly by Carbon::parse()
      *
      * @param  string $dateTimeFormat
-     * @return \Khill\Lavacharts\DataTables\DataTable
-     * @throws \Khill\Lavacharts\Exceptions\InvalidDateTimeFormat
+     * @return \Andrewskm\Lavacharts\DataTables\DataTable
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidDateTimeFormat
      */
     public function setDateTimeFormat($dateTimeFormat)
     {
@@ -193,7 +193,7 @@ class DataTable implements Jsonable, JsonSerializable
      * the chart's format.
      *
      * @since  3.0.0
-     * @return \Khill\Lavacharts\DataTables\DataTable;
+     * @return \Andrewskm\Lavacharts\DataTables\DataTable;
      */
     public function bare()
     {
@@ -220,11 +220,11 @@ class DataTable implements Jsonable, JsonSerializable
      *
      * @param  mixed $typeOrColDescArr Column type or an array describing the column.
      * @param  string $label A label for the column. (Optional)
-     * @param  \Khill\Lavacharts\DataTables\Formats\Format $format A column format object. (Optional)
+     * @param  \Andrewskm\Lavacharts\DataTables\Formats\Format $format A column format object. (Optional)
      * @param  string $role A role for the column. (Optional)
-     * @return \Khill\Lavacharts\DataTables\DataTable
-     * @throws \Khill\Lavacharts\Exceptions\InvalidConfigValue
-     * @throws \Khill\Lavacharts\Exceptions\InvalidConfigProperty
+     * @return \Andrewskm\Lavacharts\DataTables\DataTable
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidConfigValue
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidConfigProperty
      */
     public function addColumn($typeOrColDescArr, $label = '', Format $format = null, $role = '')
     {
@@ -246,8 +246,8 @@ class DataTable implements Jsonable, JsonSerializable
      * Adds multiple columns to the DataTable
      *
      * @param  array $arrayOfColumns Array of columns to batch add to the DataTable.
-     * @return \Khill\Lavacharts\DataTables\DataTable
-     * @throws \Khill\Lavacharts\Exceptions\InvalidColumnDefinition
+     * @return \Andrewskm\Lavacharts\DataTables\DataTable
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidColumnDefinition
      */
     public function addColumns(array $arrayOfColumns)
     {
@@ -267,11 +267,11 @@ class DataTable implements Jsonable, JsonSerializable
      *
      * @since  3.0.0.
      * @param  string $label A label for the column.
-     * @param  \Khill\Lavacharts\DataTables\Formats\Format $format A column format object. (Optional)
+     * @param  \Andrewskm\Lavacharts\DataTables\Formats\Format $format A column format object. (Optional)
      * @param  string $role A role for the column. (Optional)
-     * @return \Khill\Lavacharts\DataTables\DataTable
-     * @throws \Khill\Lavacharts\Exceptions\InvalidLabel
-     * @throws \Khill\Lavacharts\Exceptions\InvalidColumnType
+     * @return \Andrewskm\Lavacharts\DataTables\DataTable
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidLabel
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidColumnType
      */
     public function addBooleanColumn($label = '', Format $format = null, $role = '')
     {
@@ -282,11 +282,11 @@ class DataTable implements Jsonable, JsonSerializable
      * Supplemental function to add a string column with less params.
      *
      * @param  string $label A label for the column.
-     * @param  \Khill\Lavacharts\DataTables\Formats\Format $format A column format object. (Optional)
+     * @param  \Andrewskm\Lavacharts\DataTables\Formats\Format $format A column format object. (Optional)
      * @param  string $role A role for the column. (Optional)
-     * @return \Khill\Lavacharts\DataTables\DataTable
-     * @throws \Khill\Lavacharts\Exceptions\InvalidLabel
-     * @throws \Khill\Lavacharts\Exceptions\InvalidColumnType
+     * @return \Andrewskm\Lavacharts\DataTables\DataTable
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidLabel
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidColumnType
      */
     public function addStringColumn($label = '', Format $format = null, $role = '')
     {
@@ -297,11 +297,11 @@ class DataTable implements Jsonable, JsonSerializable
      * Supplemental function to add a date column with less params.
      *
      * @param  string $label A label for the column.
-     * @param  \Khill\Lavacharts\DataTables\Formats\Format $format A column format object. (Optional)
+     * @param  \Andrewskm\Lavacharts\DataTables\Formats\Format $format A column format object. (Optional)
      * @param  string $role A role for the column. (Optional)
-     * @return \Khill\Lavacharts\DataTables\DataTable
-     * @throws \Khill\Lavacharts\Exceptions\InvalidLabel
-     * @throws \Khill\Lavacharts\Exceptions\InvalidColumnType
+     * @return \Andrewskm\Lavacharts\DataTables\DataTable
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidLabel
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidColumnType
      */
     public function addDateColumn($label = '', Format $format = null, $role = '')
     {
@@ -313,11 +313,11 @@ class DataTable implements Jsonable, JsonSerializable
      *
      * @since  3.0.0
      * @param  string $label A label for the column.
-     * @param  \Khill\Lavacharts\DataTables\Formats\Format $format A column format object. (Optional)
+     * @param  \Andrewskm\Lavacharts\DataTables\Formats\Format $format A column format object. (Optional)
      * @param  string $role A role for the column. (Optional)
-     * @return \Khill\Lavacharts\DataTables\DataTable
-     * @throws \Khill\Lavacharts\Exceptions\InvalidLabel
-     * @throws \Khill\Lavacharts\Exceptions\InvalidColumnType
+     * @return \Andrewskm\Lavacharts\DataTables\DataTable
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidLabel
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidColumnType
      */
     public function addDateTimeColumn($label = '', Format $format = null, $role = '')
     {
@@ -329,11 +329,11 @@ class DataTable implements Jsonable, JsonSerializable
      *
      * @since  3.0.0
      * @param  string $label A label for the column.
-     * @param  \Khill\Lavacharts\DataTables\Formats\Format $format A column format object. (Optional)
+     * @param  \Andrewskm\Lavacharts\DataTables\Formats\Format $format A column format object. (Optional)
      * @param  string $role A role for the column. (Optional)
-     * @return \Khill\Lavacharts\DataTables\DataTable
-     * @throws \Khill\Lavacharts\Exceptions\InvalidLabel
-     * @throws \Khill\Lavacharts\Exceptions\InvalidColumnType
+     * @return \Andrewskm\Lavacharts\DataTables\DataTable
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidLabel
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidColumnType
      */
     public function addTimeOfDayColumn($label = '', Format $format = null, $role = '')
     {
@@ -344,11 +344,11 @@ class DataTable implements Jsonable, JsonSerializable
      * Supplemental function to add a number column with less params.
      *
      * @param  string $label A label for the column.
-     * @param  \Khill\Lavacharts\DataTables\Formats\Format $format A column format object. (Optional)
+     * @param  \Andrewskm\Lavacharts\DataTables\Formats\Format $format A column format object. (Optional)
      * @param  string $role A role for the column. (Optional)
-     * @return \Khill\Lavacharts\DataTables\DataTable
-     * @throws \Khill\Lavacharts\Exceptions\InvalidLabel
-     * @throws \Khill\Lavacharts\Exceptions\InvalidColumnType
+     * @return \Andrewskm\Lavacharts\DataTables\DataTable
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidLabel
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidColumnType
      */
     public function addNumberColumn($label = '', Format $format = null, $role = '')
     {
@@ -362,8 +362,8 @@ class DataTable implements Jsonable, JsonSerializable
      * @param  string $type    Type of data the column will define.
      * @param  string $role    Type of role that the data will represent.
      * @param  array  $options Customization of the role.
-     * @return \Khill\Lavacharts\DataTables\DataTable
-     * @throws \Khill\Lavacharts\Exceptions\InvalidColumnRole
+     * @return \Andrewskm\Lavacharts\DataTables\DataTable
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidColumnRole
      */
     public function addRoleColumn($type, $role, array $options = [])
     {
@@ -380,10 +380,10 @@ class DataTable implements Jsonable, JsonSerializable
      * @access protected
      * @param  string                                      $type   Type of column to create
      * @param  string                                      $label  Label for the column.
-     * @param  \Khill\Lavacharts\DataTables\Formats\Format $format A column format object.
+     * @param  \Andrewskm\Lavacharts\DataTables\Formats\Format $format A column format object.
      * @param  string                                      $role   A role for the column.
      * @param  array                                       $options Extra, column specific options
-     * @return \Khill\Lavacharts\DataTables\DataTable
+     * @return \Andrewskm\Lavacharts\DataTables\DataTable
      */
     protected function createColumnWithParams($type, $label = '', Format $format = null, $role = '', array $options = [])
     {
@@ -397,8 +397,8 @@ class DataTable implements Jsonable, JsonSerializable
      *
      * @since  3.0.0
      * @param  int $colIndex
-     * @return \Khill\Lavacharts\DataTables\DataTable
-     * @throws \Khill\Lavacharts\Exceptions\InvalidColumnIndex
+     * @return \Andrewskm\Lavacharts\DataTables\DataTable
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidColumnIndex
      */
     public function dropColumn($colIndex)
     {
@@ -417,9 +417,9 @@ class DataTable implements Jsonable, JsonSerializable
      * Sets the format of the column.
      *
      * @param  integer $index
-     * @param  \Khill\Lavacharts\DataTables\Formats\Format $format
-     * @return \Khill\Lavacharts\DataTables\DataTable
-     * @throws \Khill\Lavacharts\Exceptions\InvalidColumnIndex
+     * @param  \Andrewskm\Lavacharts\DataTables\Formats\Format $format
+     * @return \Andrewskm\Lavacharts\DataTables\DataTable
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidColumnIndex
      */
     public function formatColumn($index, Format $format = null)
     {
@@ -434,7 +434,7 @@ class DataTable implements Jsonable, JsonSerializable
      * Sets the format of multiple columns.
      *
      * @param  array $formatArray
-     * @return \Khill\Lavacharts\DataTables\DataTable
+     * @return \Andrewskm\Lavacharts\DataTables\DataTable
      */
     public function formatColumns(array $formatArray)
     {
@@ -477,10 +477,10 @@ class DataTable implements Jsonable, JsonSerializable
      * with null for the first two cells, you would specify [null, null, {cell_val}].
      *
      * @param  array|null $valueArray Array of values describing cells or null for a null row.
-     * @return \Khill\Lavacharts\DataTables\DataTable
-     * @throws \Khill\Lavacharts\Exceptions\InvalidRowDefinition
-     * @throws \Khill\Lavacharts\Exceptions\InvalidRowProperty
-     * @throws \Khill\Lavacharts\Exceptions\InvalidCellCount
+     * @return \Andrewskm\Lavacharts\DataTables\DataTable
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidRowDefinition
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidRowProperty
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidCellCount
      */
     public function addRow(array $valueArray = null)
     {
@@ -493,10 +493,10 @@ class DataTable implements Jsonable, JsonSerializable
      * Adds multiple rows to the DataTable.
      *
      * @see    addRow()
-     * @param  \Khill\Lavacharts\DataTables\Rows\Row[] $arrayOfRows
-     * @return \Khill\Lavacharts\DataTables\DataTable
-     * @throws \Khill\Lavacharts\Exceptions\InvalidConfigValue
-     * @throws \Khill\Lavacharts\Exceptions\InvalidRowDefinition
+     * @param  \Andrewskm\Lavacharts\DataTables\Rows\Row[] $arrayOfRows
+     * @return \Andrewskm\Lavacharts\DataTables\DataTable
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidConfigValue
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidRowDefinition
      */
     public function addRows(array $arrayOfRows)
     {
@@ -511,7 +511,7 @@ class DataTable implements Jsonable, JsonSerializable
     /**
      * Returns the rows array from the DataTable
      *
-     * @return \Khill\Lavacharts\DataTables\Rows\Row[]
+     * @return \Andrewskm\Lavacharts\DataTables\Rows\Row[]
      */
     public function getRows()
     {
@@ -533,8 +533,8 @@ class DataTable implements Jsonable, JsonSerializable
      *
      * @since  3.0.0
      * @param  int $index
-     * @return \Khill\Lavacharts\DataTables\Columns\Column
-     * @throws \Khill\Lavacharts\Exceptions\InvalidColumnIndex
+     * @return \Andrewskm\Lavacharts\DataTables\Columns\Column
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidColumnIndex
      */
     public function getColumn($index)
     {
@@ -546,7 +546,7 @@ class DataTable implements Jsonable, JsonSerializable
     /**
      * Returns the column array from the DataTable
      *
-     * @return \Khill\Lavacharts\DataTables\Columns\Column[]
+     * @return \Andrewskm\Lavacharts\DataTables\Columns\Column[]
      */
     public function getColumns()
     {
@@ -559,7 +559,7 @@ class DataTable implements Jsonable, JsonSerializable
      * @since  3.0.0
      * @param  string $type
      * @return array
-     * @throws \Khill\Lavacharts\Exceptions\InvalidColumnType
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidColumnType
      */
     public function getColumnsByType($type)
     {
@@ -592,7 +592,7 @@ class DataTable implements Jsonable, JsonSerializable
      * @since  3.0.0
      * @param  int $index
      * @return string
-     * @throws \Khill\Lavacharts\Exceptions\InvalidColumnIndex
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidColumnIndex
      */
     public function getColumnLabel($index)
     {
@@ -605,7 +605,7 @@ class DataTable implements Jsonable, JsonSerializable
      * @since  3.0.0
      * @param  int $index
      * @return string
-     * @throws \Khill\Lavacharts\Exceptions\InvalidColumnIndex
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidColumnIndex
      */
     public function getColumnType($index)
     {
@@ -646,7 +646,7 @@ class DataTable implements Jsonable, JsonSerializable
      * Returns the formatted columns in an array from the DataTable
      *
      * @since  3.0.0
-     * @return \Khill\Lavacharts\DataTables\Columns\Column[]
+     * @return \Andrewskm\Lavacharts\DataTables\Columns\Column[]
      */
     public function getFormattedColumns()
     {
@@ -721,7 +721,7 @@ class DataTable implements Jsonable, JsonSerializable
      * @access protected
      * @param  int $index
      * @return void
-     * @throws \Khill\Lavacharts\Exceptions\InvalidColumnIndex
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidColumnIndex
      */
     protected function indexCheck($index)
     {

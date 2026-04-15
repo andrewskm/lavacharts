@@ -1,6 +1,6 @@
 <?php
 
-namespace Khill\Lavacharts\Exceptions;
+namespace Andrewskm\Lavacharts\Exceptions;
 
 class InvalidLavaObject extends LavaException
 {

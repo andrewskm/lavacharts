@@ -1,5 +1,5 @@
 <?php
-    use Khill\Lavacharts\DataTables\DataFactory;
+    use Andrewskm\Lavacharts\DataTables\DataFactory;
 
     $data = DataFactory::arrayToDataTable([
         ['Dinosaur', 'Length'],

@@ -1,12 +1,12 @@
 <?php
 
-namespace Khill\Lavacharts\DataTables\Columns;
+namespace Andrewskm\Lavacharts\DataTables\Columns;
 
-use Khill\Lavacharts\Values\Role;
-use Khill\Lavacharts\Values\StringValue;
-use Khill\Lavacharts\DataTables\Formats\Format;
-use Khill\Lavacharts\Exceptions\InvalidColumnType;
-use Khill\Lavacharts\Exceptions\InvalidColumnRole;
+use Andrewskm\Lavacharts\Values\Role;
+use Andrewskm\Lavacharts\Values\StringValue;
+use Andrewskm\Lavacharts\DataTables\Formats\Format;
+use Andrewskm\Lavacharts\Exceptions\InvalidColumnType;
+use Andrewskm\Lavacharts\Exceptions\InvalidColumnRole;
 
 /**
  * ColumnFactory Class
@@ -15,7 +15,7 @@ use Khill\Lavacharts\Exceptions\InvalidColumnRole;
  * the type of column to create, all others are optional.
  *
  *
- * @package   Khill\Lavacharts\DataTables\Columns
+ * @package   Andrewskm\Lavacharts\DataTables\Columns
  * @since     3.0.0
  * @author    Kevin Hill <kevinkhill@gmail.com>
  * @copyright (c) 2017, KHill Designs
@@ -47,11 +47,11 @@ class ColumnFactory
      * @since  3.0.0
      * @param  string                                      $type    Type of column to create.
      * @param  string                                      $label   A label for the column.
-     * @param  \Khill\Lavacharts\DataTables\Formats\Format $format  Column formatter for the data.
+     * @param  \Andrewskm\Lavacharts\DataTables\Formats\Format $format  Column formatter for the data.
      * @param  string                                      $role    A role for the column to play.
      * @param  array                                       $options Column options.
-     * @return \Khill\Lavacharts\DataTables\Columns\Column
-     * @throws \Khill\Lavacharts\Exceptions\InvalidColumnRole
+     * @return \Andrewskm\Lavacharts\DataTables\Columns\Column
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidColumnRole
      */
     public function create(
         $type,
@@ -75,9 +75,9 @@ class ColumnFactory
     /**
      * Creates a new Column with the same values, while applying the Format.
      *
-     * @param  \Khill\Lavacharts\DataTables\Columns\Column $column
-     * @param  \Khill\Lavacharts\DataTables\Formats\Format $format
-     * @return \Khill\Lavacharts\DataTables\Columns\Column
+     * @param  \Andrewskm\Lavacharts\DataTables\Columns\Column $column
+     * @param  \Andrewskm\Lavacharts\DataTables\Formats\Format $format
+     * @return \Andrewskm\Lavacharts\DataTables\Columns\Column
      */
     public function applyFormat(Column $column, Format $format = null)
     {
@@ -93,7 +93,7 @@ class ColumnFactory
      * Checks if a given type is a valid column type
      *
      * @param  string $type
-     * @throws \Khill\Lavacharts\Exceptions\InvalidColumnType
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidColumnType
      */
     public static function isValidType($type)
     {

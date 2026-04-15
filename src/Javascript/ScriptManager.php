@@ -1,14 +1,14 @@
 <?php
 
-namespace Khill\Lavacharts\Javascript;
+namespace Andrewskm\Lavacharts\Javascript;
 
-use Khill\Lavacharts\Charts\Chart;
-use Khill\Lavacharts\Dashboards\Dashboard;
-use Khill\Lavacharts\Exceptions\ElementIdException;
-use Khill\Lavacharts\Support\Buffer;
-use Khill\Lavacharts\Support\Options;
-use Khill\Lavacharts\Support\Traits\HasOptionsTrait as HasOptions;
-use Khill\Lavacharts\Support\Contracts\RenderableInterface as Renderable;
+use Andrewskm\Lavacharts\Charts\Chart;
+use Andrewskm\Lavacharts\Dashboards\Dashboard;
+use Andrewskm\Lavacharts\Exceptions\ElementIdException;
+use Andrewskm\Lavacharts\Support\Buffer;
+use Andrewskm\Lavacharts\Support\Options;
+use Andrewskm\Lavacharts\Support\Traits\HasOptionsTrait as HasOptions;
+use Andrewskm\Lavacharts\Support\Contracts\RenderableInterface as Renderable;
 
 /**
  * ScriptManager Class
@@ -18,7 +18,7 @@ use Khill\Lavacharts\Support\Contracts\RenderableInterface as Renderable;
  * and track if it is in page or not.
  *
  * @category   Class
- * @package    Khill\Lavacharts\Javascript
+ * @package    Andrewskm\Lavacharts\Javascript
  * @since      3.0.5
  * @author     Kevin Hill <kevinkhill@gmail.com>
  * @copyright  (c) 2017, KHill Designs
@@ -95,7 +95,7 @@ class ScriptManager
      * Gets the lava.js module.
      *
      * @param  array $config
-     * @return \Khill\Lavacharts\Support\Buffer
+     * @return \Andrewskm\Lavacharts\Support\Buffer
      */
     public function getLavaJsModule(array $config = [])
     {
@@ -115,9 +115,9 @@ class ScriptManager
      * Returns a buffer with the javascript of a renderable resource.
      *
      *
-     * @param  \Khill\Lavacharts\Support\Contracts\RenderableInterface $renderable
-     * @return \Khill\Lavacharts\Support\Buffer
-     * @throws \Khill\Lavacharts\Exceptions\ElementIdException
+     * @param  \Andrewskm\Lavacharts\Support\Contracts\RenderableInterface $renderable
+     * @return \Andrewskm\Lavacharts\Support\Buffer
+     * @throws \Andrewskm\Lavacharts\Exceptions\ElementIdException
      */
     public function getOutputBuffer(Renderable $renderable)
     {
@@ -141,8 +141,8 @@ class ScriptManager
     /**
      * Wraps a buffer with an html script tag
      *
-     * @param \Khill\Lavacharts\Support\Buffer $buffer
-     * @return \Khill\Lavacharts\Support\Buffer
+     * @param \Andrewskm\Lavacharts\Support\Buffer $buffer
+     * @return \Andrewskm\Lavacharts\Support\Buffer
      */
     private function scriptTagWrap(Buffer $buffer)
     {

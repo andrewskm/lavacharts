@@ -1,5 +1,5 @@
 <?php
-    use \Khill\Lavacharts\DataTables\DataFactory;
+    use \Andrewskm\Lavacharts\DataTables\DataFactory;
 
     $data = DataFactory::arrayToDataTable([
           ['Location', 'Parent', 'Market trade volume (size)', 'Market increase/decrease (color)'],

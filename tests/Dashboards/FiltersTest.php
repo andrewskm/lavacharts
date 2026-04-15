@@ -1,10 +1,10 @@
 <?php
 
-namespace Khill\Lavacharts\Tests\Dashboards\Filters;
+namespace Andrewskm\Lavacharts\Tests\Dashboards\Filters;
 
-use Khill\Lavacharts\Dashboards\Filters\Filter;
-use Khill\Lavacharts\Dashboards\Filters\StringFilter;
-use Khill\Lavacharts\Tests\ProvidersTestCase;
+use Andrewskm\Lavacharts\Dashboards\Filters\Filter;
+use Andrewskm\Lavacharts\Dashboards\Filters\StringFilter;
+use Andrewskm\Lavacharts\Tests\ProvidersTestCase;
 
 class FiltersTest extends ProvidersTestCase
 {
@@ -24,7 +24,7 @@ class FiltersTest extends ProvidersTestCase
      */
     public function testConstructorWithColumnIndex($filterType)
     {
-        $filter = 'Khill\Lavacharts\Dashboards\Filters\\'.$filterType;
+        $filter = 'Andrewskm\Lavacharts\Dashboards\Filters\\'.$filterType;
 
         $filterClass = new $filter(2);
 
@@ -38,7 +38,7 @@ class FiltersTest extends ProvidersTestCase
      */
     public function testConstructorWithColumnLabel($filterType)
     {
-        $filter = 'Khill\Lavacharts\Dashboards\Filters\\'.$filterType;
+        $filter = 'Andrewskm\Lavacharts\Dashboards\Filters\\'.$filterType;
 
         $filterClass = new $filter('myColumnLabel');
 
@@ -53,7 +53,7 @@ class FiltersTest extends ProvidersTestCase
      */
     public function testConstructorWithColumnIndexAndOptions($filterType)
     {
-        $filter = 'Khill\Lavacharts\Dashboards\Filters\\'.$filterType;
+        $filter = 'Andrewskm\Lavacharts\Dashboards\Filters\\'.$filterType;
 
         $filterClass = new $filter(2, ['floatOption' => 12.34]);
 
@@ -68,7 +68,7 @@ class FiltersTest extends ProvidersTestCase
      */
     public function testGetWrapType($filterType)
     {
-        $filter = 'Khill\Lavacharts\Dashboards\Filters\\'.$filterType;
+        $filter = 'Andrewskm\Lavacharts\Dashboards\Filters\\'.$filterType;
 
         $filterClass = new $filter('myColumnLabel');
 
@@ -77,7 +77,7 @@ class FiltersTest extends ProvidersTestCase
 
     /**
      * @depends testConstructorWithColumnIndex
-     * @expectedException \Khill\Lavacharts\Exceptions\InvalidParamType
+     * @expectedException \Andrewskm\Lavacharts\Exceptions\InvalidParamType
      */
     public function testConstructorWithInvalidType()
     {
@@ -87,11 +87,11 @@ class FiltersTest extends ProvidersTestCase
     /**
      * @dataProvider filterTypeProvider
      * @depends testConstructorWithColumnIndex
-     * @covers \Khill\Lavacharts\Dashboards\Filters\Filter::getType
+     * @covers \Andrewskm\Lavacharts\Dashboards\Filters\Filter::getType
      */
     public function testGetType($filterType)
     {
-        $filter = 'Khill\Lavacharts\Dashboards\Filters\\'.$filterType;
+        $filter = 'Andrewskm\Lavacharts\Dashboards\Filters\\'.$filterType;
 
         $filterClass = new $filter('myColumnLabel');
 

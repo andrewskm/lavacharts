@@ -1,16 +1,16 @@
 <?php
 
-namespace Khill\Lavacharts\DataTables\Cells;
+namespace Andrewskm\Lavacharts\DataTables\Cells;
 
-use Khill\Lavacharts\Exceptions\InvalidParamType;
-use Khill\Lavacharts\Support\Customizable;
+use Andrewskm\Lavacharts\Exceptions\InvalidParamType;
+use Andrewskm\Lavacharts\Support\Customizable;
 
 /**
  * DataCell Object
  *
  * Holds the information for a data point
  *
- * @package   Khill\Lavacharts\DataTables\Cells
+ * @package   Andrewskm\Lavacharts\DataTables\Cells
  * @since     3.0.0
  * @author    Kevin Hill <kevinkhill@gmail.com>
  * @copyright (c) 2017, KHill Designs
@@ -57,7 +57,7 @@ class Cell extends Customizable
      * @param  string       $v The cell value
      * @param  string       $f A string version of the v value
      * @param  array|string $p A map of custom values applied to the cell
-     * @throws \Khill\Lavacharts\Exceptions\InvalidParamType
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidParamType
      */
     public function __construct($v, $f = '', array $p = [])
     {

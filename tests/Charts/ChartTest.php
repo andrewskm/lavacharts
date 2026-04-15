@@ -1,9 +1,9 @@
 <?php
 
-namespace Khill\Lavacharts\Tests\Charts;
+namespace Andrewskm\Lavacharts\Tests\Charts;
 
-use Khill\Lavacharts\Charts\LineChart;
-use Khill\Lavacharts\Tests\ProvidersTestCase;
+use Andrewskm\Lavacharts\Charts\LineChart;
+use Andrewskm\Lavacharts\Tests\ProvidersTestCase;
 
 class ChartTest extends ProvidersTestCase
 {
@@ -21,7 +21,7 @@ class ChartTest extends ProvidersTestCase
      */
     public function testInstanceCreation($chartType)
     {
-        $chartFQN = "Khill\\Lavacharts\\Charts\\".$chartType;
+        $chartFQN = "Andrewskm\\Lavacharts\\Charts\\".$chartType;
 
         $chart = new $chartFQN(
             $this->getMockLabel('TestChart'),

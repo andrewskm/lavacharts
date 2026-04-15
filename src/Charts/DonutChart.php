@@ -1,6 +1,6 @@
 <?php
 
-namespace Khill\Lavacharts\Charts;
+namespace Andrewskm\Lavacharts\Charts;
 
 /**
  * DonutChart Class
@@ -9,7 +9,7 @@ namespace Khill\Lavacharts\Charts;
  * Displays tooltips when hovering over slices.
  *
  *
- * @package   Khill\Lavacharts\Charts
+ * @package   Andrewskm\Lavacharts\Charts
  * @since     3.1.5
  * @author    Kevin Hill <kevinkhill@gmail.com>
  * @copyright (c) 2017, KHill Designs

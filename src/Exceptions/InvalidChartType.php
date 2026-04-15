@@ -1,8 +1,8 @@
 <?php
 
-namespace Khill\Lavacharts\Exceptions;
+namespace Andrewskm\Lavacharts\Exceptions;
 
-use Khill\Lavacharts\Charts\ChartFactory;
+use Andrewskm\Lavacharts\Charts\ChartFactory;
 
 class InvalidChartType extends LavaException
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Khill\Lavacharts\Charts;
+namespace Andrewskm\Lavacharts\Charts;
 
-use \Khill\Lavacharts\Support\Traits\PngRenderableTrait as PngRenderable;
-use \Khill\Lavacharts\Support\Traits\MaterialRenderableTrait as MaterialRenderable;
+use \Andrewskm\Lavacharts\Support\Traits\PngRenderableTrait as PngRenderable;
+use \Andrewskm\Lavacharts\Support\Traits\MaterialRenderableTrait as MaterialRenderable;
 
 /**
  * ScatterChart Class
@@ -15,7 +15,7 @@ use \Khill\Lavacharts\Support\Traits\MaterialRenderableTrait as MaterialRenderab
  * Use the series property to specify properties of each series individually.
  *
  *
- * @package   Khill\Lavacharts\Charts
+ * @package   Andrewskm\Lavacharts\Charts
  * @since     3.0.0
  * @author    Kevin Hill <kevinkhill@gmail.com>
  * @copyright (c) 2017, KHill Designs

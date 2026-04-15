@@ -1,12 +1,12 @@
 <?php
 
-namespace Khill\Lavacharts\Tests;
+namespace Andrewskm\Lavacharts\Tests;
 
-use Khill\Lavacharts\Charts\ChartFactory;
-use Khill\Lavacharts\Lavacharts;
+use Andrewskm\Lavacharts\Charts\ChartFactory;
+use Andrewskm\Lavacharts\Lavacharts;
 
 /**
- * @property \Khill\Lavacharts\Lavacharts lava
+ * @property \Andrewskm\Lavacharts\Lavacharts lava
  */
 class LavachartsTest extends ProvidersTestCase
 {
@@ -16,16 +16,16 @@ class LavachartsTest extends ProvidersTestCase
 
         $this->lava = new Lavacharts;
 
-        $this->mockLabel = \Mockery::mock('\\Khill\\Lavacharts\\Values\\Label', ['MockLabel'])->makePartial();
+        $this->mockLabel = \Mockery::mock('\\Andrewskm\\Lavacharts\\Values\\Label', ['MockLabel'])->makePartial();
 
-        $this->partialDataTableWithReceives = \Mockery::mock('\\Khill\\Lavacharts\\DataTables\\DataTable')
+        $this->partialDataTableWithReceives = \Mockery::mock('\\Andrewskm\\Lavacharts\\DataTables\\DataTable')
                                           ->shouldReceive('toJson')
                                           ->atMost(1)
                                           ->shouldReceive('hasFormats')
                                           ->atLeast(1)
                                           ->getMock();
 
-        $this->mockLineChart = \Mockery::mock('\\Khill\\Lavacharts\\Charts\\LineChart');
+        $this->mockLineChart = \Mockery::mock('\\Andrewskm\\Lavacharts\\Charts\\LineChart');
     }
 
     public function testCreateDataTableViaAlias()
@@ -71,7 +71,7 @@ class LavachartsTest extends ProvidersTestCase
 
     /**
      * @dataProvider nonStringProvider
-     * @expectedException \Khill\Lavacharts\Exceptions\InvalidLabel
+     * @expectedException \Andrewskm\Lavacharts\Exceptions\InvalidLabel
      */
     public function testExistsWithNonStringInputForLabel($badTypes)
     {
@@ -164,7 +164,7 @@ class LavachartsTest extends ProvidersTestCase
 
     /**
      * @depends testCreateDataTableViaAlias
-     * @expectedException \Khill\Lavacharts\Exceptions\InvalidDivDimensions
+     * @expectedException \Andrewskm\Lavacharts\Exceptions\InvalidDivDimensions
      */
     public function testRenderChartWithDivAndBadDimensionType()
     {
@@ -175,7 +175,7 @@ class LavachartsTest extends ProvidersTestCase
 
     /**
      * @depends testCreateDataTableViaAlias
-     * @expectedException \Khill\Lavacharts\Exceptions\InvalidConfigValue
+     * @expectedException \Andrewskm\Lavacharts\Exceptions\InvalidConfigValue
      */
     public function testRenderChartWithDivAndDimensionsWithBadValues()
     {
@@ -208,7 +208,7 @@ class LavachartsTest extends ProvidersTestCase
     }
 
     /**
-     * @expectedException \Khill\Lavacharts\Exceptions\InvalidLavaObject
+     * @expectedException \Andrewskm\Lavacharts\Exceptions\InvalidLavaObject
      */
     public function testRenderAliasWithInvalidLavaObject()
     {
@@ -216,7 +216,7 @@ class LavachartsTest extends ProvidersTestCase
     }
 
     /**
-     * @expectedException \Khill\Lavacharts\Exceptions\InvalidLabel
+     * @expectedException \Andrewskm\Lavacharts\Exceptions\InvalidLabel
      */
     public function testCreateChartWithMissingLabel()
     {
@@ -224,7 +224,7 @@ class LavachartsTest extends ProvidersTestCase
     }
 
     /**
-     * @expectedException \Khill\Lavacharts\Exceptions\InvalidLabel
+     * @expectedException \Andrewskm\Lavacharts\Exceptions\InvalidLabel
      */
     public function testCreateChartWithInvalidLabel()
     {
@@ -236,7 +236,7 @@ class LavachartsTest extends ProvidersTestCase
      */
     public function testStoreChartIntoVolcano()
     {
-        $mockPieChart = \Mockery::mock('\Khill\Lavacharts\Charts\PieChart', [
+        $mockPieChart = \Mockery::mock('\Andrewskm\Lavacharts\Charts\PieChart', [
             $this->mockLabel,
             $this->getMockDataTable()
         ])->shouldReceive('getType')
@@ -251,7 +251,7 @@ class LavachartsTest extends ProvidersTestCase
         $charts = $this->inspect($volcano, 'charts');
 
         $this->assertArrayHasKey('PieChart', $charts);
-        $this->assertInstanceOf('\Khill\Lavacharts\Charts\PieChart', $charts['PieChart']['MockLabel']);
+        $this->assertInstanceOf('\Andrewskm\Lavacharts\Charts\PieChart', $charts['PieChart']['MockLabel']);
     }
 
     public function testJsapiMethodWithCoreJsTracking()

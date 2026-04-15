@@ -1,8 +1,8 @@
 <?php
 
-namespace Khill\Lavacharts\Charts;
+namespace Andrewskm\Lavacharts\Charts;
 
-use \Khill\Lavacharts\Support\Traits\PngRenderableTrait as PngRenderable;
+use \Andrewskm\Lavacharts\Support\Traits\PngRenderableTrait as PngRenderable;
 
 /**
  * ComboChart Class
@@ -14,7 +14,7 @@ use \Khill\Lavacharts\Support\Traits\PngRenderableTrait as PngRenderable;
  * Use the series property to specify properties of each series individually.
  *
  *
- * @package   Khill\Lavacharts\Charts
+ * @package   Andrewskm\Lavacharts\Charts
  * @since     2.0.0
  * @author    Kevin Hill <kevinkhill@gmail.com>
  * @copyright (c) 2017, KHill Designs

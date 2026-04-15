@@ -1,8 +1,8 @@
 <?php
 
-namespace Khill\Lavacharts\Tests\DataTables\Columns;
+namespace Andrewskm\Lavacharts\Tests\DataTables\Columns;
 
-use Khill\Lavacharts\DataTables\Columns\Column;
+use Andrewskm\Lavacharts\DataTables\Columns\Column;
 
 class MockColumn extends Column
 {

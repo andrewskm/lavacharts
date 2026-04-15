@@ -2,9 +2,9 @@
 
 require(realpath(__DIR__ . '/../../vendor/autoload.php'));
 
-use Khill\Lavacharts\Charts\ChartFactory;
+use Andrewskm\Lavacharts\Charts\ChartFactory;
 
-$lava = new \Khill\Lavacharts\Lavacharts;
+$lava = new \Andrewskm\Lavacharts\Lavacharts;
 
 if (preg_match('/\.(?:png|jpg|jpeg|gif)$/', $_SERVER["REQUEST_URI"])) {
     return false;    // serve the requested resource as-is.

@@ -1,9 +1,9 @@
 <?php
 
-namespace Khill\Lavacharts\Tests\Dashboards;
+namespace Andrewskm\Lavacharts\Tests\Dashboards;
 
-use Khill\Lavacharts\Tests\ProvidersTestCase;
-use Khill\Lavacharts\Dashboards\Wrappers\ChartWrapper;
+use Andrewskm\Lavacharts\Tests\ProvidersTestCase;
+use Andrewskm\Lavacharts\Dashboards\Wrappers\ChartWrapper;
 
 class ChartWrapperTest extends ProvidersTestCase
 {
@@ -21,7 +21,7 @@ class ChartWrapperTest extends ProvidersTestCase
 
     public function getMockLineChart()
     {
-        return \Mockery::mock('\Khill\Lavacharts\Charts\LineChart')
+        return \Mockery::mock('\Andrewskm\Lavacharts\Charts\LineChart')
             ->shouldReceive('setRenderable')
             ->once()
             ->with(false)
@@ -41,36 +41,36 @@ class ChartWrapperTest extends ProvidersTestCase
     }
 
     /**
-     * @covers \Khill\Lavacharts\Dashboards\Wrappers\Wrapper::getElementId
+     * @covers \Andrewskm\Lavacharts\Dashboards\Wrappers\Wrapper::getElementId
      */
     public function testGetElementId()
     {
-        $areaChart = \Mockery::mock('\Khill\Lavacharts\Charts\AreaChart')->makePartial();
+        $areaChart = \Mockery::mock('\Andrewskm\Lavacharts\Charts\AreaChart')->makePartial();
 
         $chartWrapper = new ChartWrapper($areaChart, $this->mockElementId);
 
-        $this->assertInstanceOf('\Khill\Lavacharts\Values\ElementId', $chartWrapper->getElementId());
+        $this->assertInstanceOf('\Andrewskm\Lavacharts\Values\ElementId', $chartWrapper->getElementId());
         $this->assertEquals('TestLabel', $chartWrapper->getElementIdStr());
     }
 
     /**
-     * @covers \Khill\Lavacharts\Dashboards\Wrappers\Wrapper::unwrap
+     * @covers \Andrewskm\Lavacharts\Dashboards\Wrappers\Wrapper::unwrap
      */
     public function testUnwrap()
     {
-        $areaChart = \Mockery::mock('\Khill\Lavacharts\Charts\AreaChart')->makePartial();
+        $areaChart = \Mockery::mock('\Andrewskm\Lavacharts\Charts\AreaChart')->makePartial();
 
         $chartWrapper = new ChartWrapper($areaChart, $this->mockElementId);
 
-        $this->assertInstanceOf('\Khill\Lavacharts\Charts\AreaChart', $chartWrapper->unwrap());
+        $this->assertInstanceOf('\Andrewskm\Lavacharts\Charts\AreaChart', $chartWrapper->unwrap());
     }
 
     /**
-     * @covers \Khill\Lavacharts\Dashboards\Wrappers\Wrapper::getJsClass
+     * @covers \Andrewskm\Lavacharts\Dashboards\Wrappers\Wrapper::getJsClass
      */
     public function testGetJsClass()
     {
-        $chart = \Mockery::mock('\Khill\Lavacharts\Charts\LineChart')
+        $chart = \Mockery::mock('\Andrewskm\Lavacharts\Charts\LineChart')
             ->shouldReceive('setRenderable')
             ->once()
             ->with(false)

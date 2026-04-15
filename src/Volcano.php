@@ -1,21 +1,21 @@
 <?php
 
-namespace Khill\Lavacharts;
+namespace Andrewskm\Lavacharts;
 
-use Khill\Lavacharts\Values\Label;
-use Khill\Lavacharts\Charts\Chart;
-use Khill\Lavacharts\Charts\ChartFactory;
-use Khill\Lavacharts\Dashboards\Dashboard;
-use Khill\Lavacharts\Exceptions\ChartNotFound;
-use Khill\Lavacharts\Exceptions\DashboardNotFound;
-use Khill\Lavacharts\Support\Contracts\RenderableInterface as Renderable;
+use Andrewskm\Lavacharts\Values\Label;
+use Andrewskm\Lavacharts\Charts\Chart;
+use Andrewskm\Lavacharts\Charts\ChartFactory;
+use Andrewskm\Lavacharts\Dashboards\Dashboard;
+use Andrewskm\Lavacharts\Exceptions\ChartNotFound;
+use Andrewskm\Lavacharts\Exceptions\DashboardNotFound;
+use Andrewskm\Lavacharts\Support\Contracts\RenderableInterface as Renderable;
 
 /**
  * Class Volcano
  *
  * Storage class that holds all defined charts and dashboards.
  *
- * @package   Khill\Lavacharts
+ * @package   Andrewskm\Lavacharts
  * @since     2.0.0
  * @author    Kevin Hill <kevinkhill@gmail.com>
  * @copyright (c) 2017, KHill Designs
@@ -28,14 +28,14 @@ class Volcano
     /**
      * Holds all of the defined Charts.
      *
-     * @var \Khill\Lavacharts\Charts\Chart[][]
+     * @var \Andrewskm\Lavacharts\Charts\Chart[][]
      */
     private $charts = [];
 
     /**
      * Holds all of the defined Dashboards.
      *
-     * @var \Khill\Lavacharts\Dashboards\Dashboard[]
+     * @var \Andrewskm\Lavacharts\Dashboards\Dashboard[]
      */
     private $dashboards = [];
 
@@ -53,8 +53,8 @@ class Volcano
      * Stores a Chart or Dashboard in the Volcano.
      *
      * @since  3.0.3
-     * @param  \Khill\Lavacharts\Support\Contracts\RenderableInterface $renderable
-     * @return \Khill\Lavacharts\Support\Contracts\RenderableInterface
+     * @param  \Andrewskm\Lavacharts\Support\Contracts\RenderableInterface $renderable
+     * @return \Andrewskm\Lavacharts\Support\Contracts\RenderableInterface
      */
     public function store(Renderable $renderable)
     {
@@ -74,10 +74,10 @@ class Volcano
      *
      * @since  3.0.3
      * @param  string                         $type  Type of Chart or Dashboard.
-     * @param  \Khill\Lavacharts\Values\Label $label Label of the Chart or Dashboard.
-     * @return \Khill\Lavacharts\Support\Contracts\RenderableInterface
-     * @throws \Khill\Lavacharts\Exceptions\ChartNotFound
-     * @throws \Khill\Lavacharts\Exceptions\DashboardNotFound
+     * @param  \Andrewskm\Lavacharts\Values\Label $label Label of the Chart or Dashboard.
+     * @return \Andrewskm\Lavacharts\Support\Contracts\RenderableInterface
+     * @throws \Andrewskm\Lavacharts\Exceptions\ChartNotFound
+     * @throws \Andrewskm\Lavacharts\Exceptions\DashboardNotFound
      */
     public function get($type, Label $label)
     {

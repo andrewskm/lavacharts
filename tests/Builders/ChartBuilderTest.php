@@ -1,13 +1,13 @@
 <?php
 
-namespace Khill\Lavacharts\Tests\Builders;
+namespace Andrewskm\Lavacharts\Tests\Builders;
 
-use Khill\Lavacharts\Builders\ChartBuilder;
-use Khill\Lavacharts\Charts\LineChart;
-use Khill\Lavacharts\Tests\ProvidersTestCase;
+use Andrewskm\Lavacharts\Builders\ChartBuilder;
+use Andrewskm\Lavacharts\Charts\LineChart;
+use Andrewskm\Lavacharts\Tests\ProvidersTestCase;
 
 /**
- * @property \Khill\Lavacharts\Builders\ChartBuilder builder
+ * @property \Andrewskm\Lavacharts\Builders\ChartBuilder builder
  */
 class ChartBuilderTest extends ProvidersTestCase
 {
@@ -26,9 +26,9 @@ class ChartBuilderTest extends ProvidersTestCase
 
         $chart = $this->builder->getChart();
 
-        $this->assertInstanceOf('\Khill\Lavacharts\Charts\LineChart', $chart);
+        $this->assertInstanceOf('\Andrewskm\Lavacharts\Charts\LineChart', $chart);
         $this->assertEquals('taco', $chart->getLabelStr());
-        $this->assertInstanceOf('\Khill\Lavacharts\Datatables\Datatable', $chart->getDataTable());
+        $this->assertInstanceOf('\Andrewskm\Lavacharts\Datatables\Datatable', $chart->getDataTable());
     }
 
     /**
@@ -64,7 +64,7 @@ class ChartBuilderTest extends ProvidersTestCase
 
         $elementId = $this->inspect($chart, 'elementId');
 
-        $this->assertInstanceOf('\Khill\Lavacharts\Values\ElementId', $elementId);
+        $this->assertInstanceOf('\Andrewskm\Lavacharts\Values\ElementId', $elementId);
         $this->assertEquals('platter', (string) $elementId);
     }
 }

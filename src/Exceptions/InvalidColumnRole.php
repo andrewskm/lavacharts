@@ -1,8 +1,8 @@
 <?php
 
-namespace Khill\Lavacharts\Exceptions;
+namespace Andrewskm\Lavacharts\Exceptions;
 
-use Khill\Lavacharts\Values\Role;
+use Andrewskm\Lavacharts\Values\Role;
 
 class InvalidColumnRole extends LavaException
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace Khill\Lavacharts\Builders;
+namespace Andrewskm\Lavacharts\Builders;
 
-use Khill\Lavacharts\Charts\ChartFactory;
-use Khill\Lavacharts\DataTables\DataTable;
-use Khill\Lavacharts\Exceptions\InvalidChartType;
+use Andrewskm\Lavacharts\Charts\ChartFactory;
+use Andrewskm\Lavacharts\DataTables\DataTable;
+use Andrewskm\Lavacharts\Exceptions\InvalidChartType;
 
 /**
  * Class ChartBuilder
@@ -12,7 +12,7 @@ use Khill\Lavacharts\Exceptions\InvalidChartType;
  * This class is used to build charts by setting the properties, instead of trying to cover
  * everything in the constructor.
  *
- * @package    Khill\Lavacharts\Builders
+ * @package    Andrewskm\Lavacharts\Builders
  * @since      3.1.0
  * @author     Kevin Hill <kevinkhill@gmail.com>
  * @copyright  (c) 2017, KHill Designs
@@ -32,7 +32,7 @@ class ChartBuilder extends GenericBuilder
     /**
      * Datatable for the chart.
      *
-     * @var \Khill\Lavacharts\DataTables\DataTable
+     * @var \Andrewskm\Lavacharts\DataTables\DataTable
      */
     protected $datatable = null;
 
@@ -62,7 +62,7 @@ class ChartBuilder extends GenericBuilder
      *
      * @param  string $type Type of chart.
      * @return self
-     * @throws \Khill\Lavacharts\Exceptions\InvalidChartType description
+     * @throws \Andrewskm\Lavacharts\Exceptions\InvalidChartType description
      */
     public function setType($type)
     {
@@ -78,7 +78,7 @@ class ChartBuilder extends GenericBuilder
     /**
      * Sets the DataTable for the chart.
      *
-     * @param  \Khill\Lavacharts\DataTables\DataTable $datatable
+     * @param  \Andrewskm\Lavacharts\DataTables\DataTable $datatable
      * @return self
      */
     public function setDatatable(DataTable $datatable = null)
@@ -130,13 +130,13 @@ class ChartBuilder extends GenericBuilder
     /**
      * Creates the chart from the assigned values.
      *
-     * @return \Khill\Lavacharts\Charts\Chart
+     * @return \Andrewskm\Lavacharts\Charts\Chart
      */
     public function getChart()
     {
-        $chart =  '\\Khill\\Lavacharts\\Charts\\' . $this->type;
+        $chart =  '\\Andrewskm\\Lavacharts\\Charts\\' . $this->type;
 
-        /** @var \Khill\Lavacharts\Charts\Chart $newChart */
+        /** @var \Andrewskm\Lavacharts\Charts\Chart $newChart */
         $newChart = new $chart(
             $this->label,
             $this->datatable,

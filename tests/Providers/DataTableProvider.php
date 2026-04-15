@@ -1,10 +1,10 @@
 <?php
 
-namespace Khill\Lavacharts\Tests\Providers;
+namespace Andrewskm\Lavacharts\Tests\Providers;
 
 use BadMethodCallException;
 use Carbon\Carbon;
-use Khill\Lavacharts\DataTables\DataTable;
+use Andrewskm\Lavacharts\DataTables\DataTable;
 
 class DataTableProvider
 {
