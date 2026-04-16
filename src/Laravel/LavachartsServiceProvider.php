@@ -45,7 +45,7 @@ class LavachartsServiceProvider extends ServiceProvider
          * If the package method exists, we're using Laravel 4
          */
         if (method_exists($this, 'package')) {
-            $this->package('khill/lavacharts');
+            $this->package('andrewskm/lavacharts');
         }
 
         include __DIR__.'/BladeTemplateExtensions.php';
