@@ -29,7 +29,7 @@ interface Jsonable extends JsonSerializable
     /**
      * Custom serialization of the chart.
      *
-     * @return array
+     * @return mixed
      */
-    public function jsonSerialize();
+    public function jsonSerialize(): mixed;
 }

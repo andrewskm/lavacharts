@@ -139,9 +139,9 @@ class Options implements Arrayable, Jsonable
     /**
      * Custom serialization of the Options object.
      *
-     * @return array
+     * @return mixed
      */
-    public function jsonSerialize()
+    public function jsonSerialize(): mixed
     {
         return $this->toArray();
     }
