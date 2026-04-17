@@ -69,6 +69,9 @@ class Lavacharts
      */
     private $scriptManager;
 
+    public ChartFactory $chartFactory;
+    public DashboardFactory $dashFactory;
+
     /**
      * Lavacharts constructor.
      */
