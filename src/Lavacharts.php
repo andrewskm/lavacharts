@@ -419,7 +419,7 @@ class Lavacharts
      * @throws \Andrewskm\Lavacharts\Exceptions\InvalidConfigValue
      * @throws \Andrewskm\Lavacharts\Exceptions\InvalidDivDimensions
      */
-    private function renderChart($type, Label $label, ElementId $elementId = null, $div = false)
+    private function renderChart($type, Label $label, ?ElementId $elementId = null, $div = false)
     {
         /** @var \Andrewskm\Lavacharts\Charts\Chart $chart */
         $chart = $this->volcano->get($type, $label);
@@ -457,7 +457,7 @@ class Lavacharts
      * @return \Andrewskm\Lavacharts\Support\Buffer
      * @throws \Andrewskm\Lavacharts\Exceptions\DashboardNotFound
      */
-    private function renderDashboard(Label $label, ElementId $elementId = null)
+    private function renderDashboard(Label $label, ?ElementId $elementId = null)
     {
         /** @var \Andrewskm\Lavacharts\Dashboards\Dashboard $dashboard */
         $dashboard = $this->volcano->get('Dashboard', $label);

@@ -81,7 +81,7 @@ class ChartBuilder extends GenericBuilder
      * @param  \Andrewskm\Lavacharts\DataTables\DataTable $datatable
      * @return self
      */
-    public function setDatatable(DataTable $datatable = null)
+    public function setDatatable(?DataTable $datatable = null)
     {
         $this->datatable = $datatable;
 
